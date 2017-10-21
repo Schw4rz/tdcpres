@@ -1,0 +1,341 @@
+---
+title: "Takeaways from <a href='https://twitter.com/hashtag/tefdatachallenge'>#TEFDataChallenge</a>"
+subtitle: "Personal Experience and Learnings"
+author: "<br><br>by Sebastian Schwarz (<a href='https://twitter.com/Schw4rzR0tG0ld'>@Schw4rzR0tG0ld</a>)<h3>Team Rtus and the Knights of Data Table</h3>"
+date: "2017-10-19<span class=inverse style='font-size: 60%; position: absolute; right: 100px; bottom: 12px;'>use &larr; &uarr; &darr; &rarr; to navigate</span>"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+class: inverse, center, middle
+
+# The Team
+
+---
+background-image: url("rtus_team.jpg")
+background-size: cover
+class: center, bottom, inverse
+
+# Rtus and the Knights of Data Table
+
+## Sebastian, Daniel, Moritz, Jann
+
+---
+
+# How We Met
+
+### Contacts and coincidence
+
+- I registered without a team, thus I needed to find motivated people
+
+- Asked last year's winner and Munich Datageeks organizer Janek Thomas (<a href='https://twitter.com/thomasjanek'>@thomasjanek</a>, PhD student at LMU) at the September edition of Datageeks at Telefónica's headquarters if he wanted to participate
+
+- Told me he will attend as speaker this year, but connected me with three master students in statistics at LMU that were already registered
+
+- Met late in a bar with *Jann* and *Daniel* the Monday before the challenge and agreed on a basic approach, e.g. using the `R` ecosystem
+
+- Team size was required to be four, so we grouped with *Moritz* (a physicist and data consultant, who registered individually) at the team building session at the event right before we got our hands on the data
+
+---
+class: center, middle, inverse
+
+# The Datathon: TEFDataChallenge
+
+---
+# The Datathon: TEFDataChallenge
+
+### Challenge on network outages with tree data science tasks
+
+- Build a model to predict failures of network elements to prevent outages and save costs
+
+- Create a nice visualization
+
+- Come up with a creative story
+
+### Real world data and problem in multiple data sets
+
+- Basic data on network elements
+
+- Historic data on unavailabilities of elements
+
+- Data from the internal ticketing system describing problems
+
+- Additional data from the ticketing system
+
+---
+# The Datathon: TEFDataChallenge
+
+### Evaluation
+
+- Kaggle like evaluation of predictive maintenance challenge, with aim to maximize complex savings function (in TEF Dollars: ₮):
+
+$$max_{I} \sum_{1_I(ne)} (- C_M(\nu_{ne}) + \sum_{1_O(ne)}C_S(\delta_{ne}, \nu_{ne}))$$
+- Variables:
+    - $ne$: Single network element
+    - $C_M$: Cost of maintenance (linear function)
+    - $C_S$: Cost of outage, i.e. potential savings (linear function)
+    - $1_I$: Indicator function if network element should be inspected (submitted as model output)
+    - $1_O$: Indicator function if outage occours on network element
+    - $\nu_{ne}$: Revenue of network element per hour (known)
+    - $\delta_{ne}$: Duration of network element outage (unknown)
+
+- Five minutes pitch to the Jury of six members from Telefónica and Wayra
+
+---
+class: inverse, center, middle
+
+# Recap of the Events: TEFDataChallenge<sup>[1]</sup>
+
+.footnotes[[1] illustration similar]
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Getting ready
+
+- **Sat 09:30pm:** Presentation of the challenge by the organizers
+
+- **Sat 11:30pm:** Setting up work environment at Wayra
+
+<img src="https://gifyu.com/images/byoc.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Main strategy, data processing and feature engieering
+
+- **Sat 12:30pm:** Got hands on the data, agreeing on approach towards the problem, splitting work
+
+<img src="https://gifyu.com/images/gotowork.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+- **Sat 07:30pm:** Seven hours later... Basic structure and features were ready, approach seemed sound
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Dataset ready, first models
+
+- **Sat 09:00pm:** First complex models didn't work well at all
+
+<img src="https://gifyu.com/images/wella8e0bf9872306382.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+- **Sat 09:30pm:** Time for a new strategy...
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Successful pivot: Start simple
+
+- **Sat 10:30pm:** First submission with overall positive score of *670k*₮ with simple approach, 1st on Public Leaderboard
+
+<img src="https://gifyu.com/images/first6ec883f898d23c41.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Promising approaches to improve failed
+
+- **Sat 11:45pm:** After leaving Wayra, coding all night in my flat
+
+- **Sun 01:00am:** Other teams were catching up with scores of *200k*₮, *400k*₮ and *670k*₮
+
+- **Sun 02:00am:** *Jann*, *Daniel* and *Moritz* left after some promising approaches to improve failed...
+
+<img src="https://gifyu.com/images/disappointede42ecd81c2203522.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Coding all night
+
+- **Sun 04:30am:** Too ambitious and hyped to sleep, coding all night I improved the score to *700k*₮ by using complex models
+
+<img src="https://gifyu.com/images/coding.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+- **Sun 05:30am:** Finally time for some sleep
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### The next morining
+
+- **Sun 08:00am:** Made it through the night, still leading on the Public Leaderboard
+
+<img src="https://gifyu.com/images/sleep702ba050a6249594.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+- **Sun 08:45am:** Starting the day with some caffeine... (fantastic food and beverage over the whole event!)
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Watching competition and at the same time preparing the pitch in a hurry
+
+- **Sun 09:00am:** *Moritz* and me back at Wayra, watching competition, tuning models, preparing pitch
+
+- **Sun 10:00am:** *Jann* and *Daniel* showed up, preparing pitch with *Moritz* and visualization
+
+<img src="https://gifyu.com/images/laptope37f7dd77fed85a9.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Still leading... Noooooooooooooooooooo
+
+- **Sun 12:20pm:** Beaten to 2nd place on the Public Leaderboard by Team *DeepThought*
+
+<img src="https://gifyu.com/images/nooo.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+--
+
+- **Sun 12:30pm:** Submission deadline
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### The pitch
+
+- **Sun 14:00pm:** Fabulous pitch to the Jury by *Jann* and *Daniel*
+
+<img src="https://gifyu.com/images/pitch.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+- **Sun 15:00pm:** Announcement of final standings and award ceremony
+
+---
+# Recap of the Events: TEFDataChallenge
+
+### Success!
+
+- **Sun 15:15pm:** Oh yes! We won! Best overall and best score (model) on Private Leaderbord
+
+<img src="https://gifyu.com/images/wooo-small.gif" alt="Drawing" style="width: 500px; display: block; margin: 0 auto;"/>
+
+- **Sun 17:00pm:** Carrying home the PS4 + VR kits, time for some rest
+
+---
+# Summary of the Event: TEFDataChallenge
+
+### Great competition and event, lots of fun!
+
+- Tough but great challenge on a real world problem
+
+- Superb technical infrastructure (cloud solution, web application with Leaderboard like Kaggle)
+
+- Great loaction, food and beverage at [**Wayra (@wayra)**](https://twitter.com/Wayra)
+
+- Fierce competition especially towards the end<sup>[1]</sup>
+
+- A lot of motivated people from different nationalities
+
+- Great prizes (thanks for the PS4 PROs :D)
+
+.footnote[[1] Private Leaderboard on next slide]
+
+---
+background-image: url("private.png")
+background-size: cover
+class: center, bottom
+
+# Final Private Leader Board
+
+---
+class: inverse, center, middle
+
+# Takeaways, Learnings and Advice
+
+---
+
+# Advice for before the Datathon
+
+### Preparation is important
+
+- Get to know strengths of each team member and have all necessary skills in your team
+    
+- Think about a *basic* approach with all the info that is available beforehand (as much as is possible)
+
+- Agree on programming language(s) and use only one language per separable problem (data processing, modelling, visualization)
+
+- Update software and setup code and information sharing tools (github, slack, email, webserver, ...)
+
+- Go to bed early, you won't have much time to sleep
+
+---
+
+# Takeaways from during the Datathon
+
+### Be pragmatic, it's a hackathon!
+
+- Listen carefully and read all hints of the organizers
+
+- Make sure to understand the problem
+
+- Don't start with coding too fast, spend time choosing the solution strategy
+
+- Split work into chunks that can be done in parallel
+
+- Start with something, improve it, don't focus on details first
+
+- Don't give up if something is not working as expected -> breathe -> start all over
+
+- Time is limited, use all of it -> sleep as little as necessary (or be efficient :D)
+
+- Don't overfit the Public Leaderboard :D (thanks for the shock *DeepThought*)
+
+---
+# Advice for the pitch 
+
+### The pitch
+
+- Time limits are usually tough, don't waste time with introductions
+
+- Present only what you think is interesting for the Jury so don't be too technical
+
+- Present what you achieved, not what you experienced<sup>[1]</sup>
+
+- Focus and present as many important parts as possible
+
+.footnote[[1] contrary to this presentation]
+
+---
+class: inverse, center, middle
+
+# Thanks and Notes
+
+---
+# Thanks!
+
+### Special thanks
+
+- My Team! Fantastic achievement by "Rtus and the Kinghts of the Data Table": **Jann**, **Daniel** and **Moritz**!
+
+- Flabbergasted how seemlessly collaboration worked out with basically complete strangers, so awesome!
+
+- [**Janek Thomas (@thomasjanek)**](https://twitter.com/thomasjanek) for establishing the contact to initial team Rtus
+
+- [**Stefan Heiderkrüger (@hdkrgr)**](https://twitter.com/hdkrgr) and Laura Velikonja for creating an awesome and tough data challenge!
+
+- [**Elena Obiols (@e_obiols)**](https://twitter.com/e_obiols) and the team of [**Telefonica Germany (@telefonica_de)**](https://twitter.com/telefonica_de) and [**Wayra (@wayra)**](https://twitter.com/Wayra) for hosting such a great event!
+
+
+.footnote[*due to a strict NDA I am not allowed to share code or more insight on TEFDataChallenge, sorry!]
+
+---
+# Sidenotes
+
+### Notes and contact
+
+- Link to the Eventpage [**www.tefdatachallenge.com**](https://www.tefdatachallenge.com/)
+
+- Slides created with the [**xaringan**](https://github.com/yihui/xaringan) package for `R` in [**R Markdown**](http://rmarkdown.rstudio.com/)
+
+- Contact me on Twitter: [**Sebastian Schwarz (@Schw4rzR0tG0ld)**](https://twitter.com/Schw4rzR0tG0ld) and check my Blog at [**www.schw4rz.de**](http://schw4rz.de)
+
+- All gifs from [**gifyu**](https://gifyu.com) with content from HBOs fantastic [**Silicon Valley**](https://www.hbo.com/silicon-valley)
+
